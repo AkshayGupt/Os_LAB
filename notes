@@ -1,0 +1,30 @@
+Vim Commands
+
+1. :wq  ->  write and quit.
+2. :w   ->  write and save
+3. :q!  ->  quit without save.
+
+  Delete Commands for vim
+4. dd   ->  delete line under cursor.
+5. x    -> delete char under cursor.
+6.dw    ->  delete word under cursor.
+7. db   -> delete word before cursor.
+
+
+   Cursor Movement
+8. h    -> move left
+9. j	-> move down
+10.k	-> move up
+11.l	->move right
+12.H	-> move cursor to the top of the screen
+13.M	-> move cursor to middle
+14.L    -> move cursor to the end of the screen
+  INsering
+
+
+15.a	-> append after cursor.
+16.i	->insert before cursor.
+17.r	->replace character under cursor with next character typed
+18.A	->append at the end of line.
+19.yy	->copy line.
+20.p	->paste.

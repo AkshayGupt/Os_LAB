@@ -1,0 +1,9 @@
+to write multi commands in terminal
+ls ; pwd
+to redirect the output of any command into another file rather than terminal
+ls >> demofile 
+>Here the output of ls will be copied to demofile
+
+Command: ls|wc
+Desc: Here '|' is known as pipe command and it transfers the output of first command as a input to second command
+More: ls|wc -l would give number of lines in the output of ls|wc.
