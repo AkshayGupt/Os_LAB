@@ -29,18 +29,168 @@ Vim Commands
 19.yy	->copy line.
 20.p	->paste.
 
-Variables
+Commands
 
-1.Predefined /Shell VAriables
-	a.HOME
-	B.PATH
-	C.SHELL
-2.User defined
-	say a,b,c,etc.
+bc  	-> opens the calculator terminal where we can do calculations . (Basic Calculato)
+
+LAB 4 - 30/01/20
+
+Switch Case
+
+Syntax
+*******
+
+case $ch in
+1)
+//Statements
+;;
+2)
+//Statements
+;;
+*)
+//Statements
+esac
+
+*************
 
 
-Command line inputs/ positional variables
+Example:
 
-Suppose there is a file which contains $1 $2
-And when we run that file we pass 2 arguments 
-eg: sh sample.sh cat dog
+echo enter a letter
+read ch
+
+case $ch in 
+
+A)
+echo "letter A"
+;;
+B)
+echo "letter B"
+;;
+*)
+echo not A nd B
+esac
+
+
+----------------------------
+
+[A-Z] includes all characters between A to Z .
+Example: 
+
+  case $ch in
+
+  [A-Z]) 
+  echo 'upper case lette'
+  ;;
+  [A-Z]*)
+  echo 'letter B'
+  ;;
+  *)
+  echo not a and b
+  ;;
+  esac
+
+
+  lets say, 
+  letter=A case 1 will be executed
+  letter = AZ case 2 
+
+  --------------------------------
+
+  Regex
+
+  ab* -> Any string which has ab in the beginning
+  [A-Z]* -> Any string which starts with any UPPERCASE letter 
+  [0-9]*  -> Any string with starts with a integer
+  *MUJ*  -> any string which contains MUJ in any position
+  *ab -> Any string which ends with ab
+
+
+
+  -------------------------------------
+
+
+  LOOPS
+
+Syntax: WHILE LOOP
+
+  while [cmd | condition]
+  do 
+   //Statements
+  done
+
+
+
+  Example:
+
+  a=1
+  while [$a -lt 10]
+  do
+  echo "value ="$a
+  a=`expr $a + 1`
+  done
+
+  
+  Syntax : FOR LOOP
+
+  for x in a b c d
+  do 
+  echo $x
+  done
+
+
+
+
+ for x in `seq 1 2 20`
+ do 
+ echo `expr $x \* 3`
+ done
+
+
+
+ Syntax : UNTIL LOOP
+
+
+ until [ cmd| condition ]
+ do
+ //Statements
+ done
+
+
+Example
+
+a=1
+until [$a -eq 10]
+do
+echo "Value= "$a
+a=`expr $a + 1`
+done
+
+
+---------------------------------------
+
+Questions:
+
+
+Q.1 Find prime number from given number to given number
+Q.2 Print table of x upto y in below format
+
+    x*1 =x
+    x*2= 2x
+
+Q.3 Use case for following:
+
+  1. if string has upper case
+  2. if string has a number
+  3. if string has MUJ
+  4. if string starts with CSE
+  5. if string has xyz anywhere
+  6. otherwise condition not meet
+
+Q.4 Print time in following format:
+    30/Jan/2020 10:00:10 TUE
+
+Q.5 Back up files of a folder in another folder
+    *Check it is already there
+    *Check it is there then find difference (Diff) then copy.
+
